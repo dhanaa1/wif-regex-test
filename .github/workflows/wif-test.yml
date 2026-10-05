@@ -26,7 +26,6 @@ jobs:
           echo "$P" | base64 -d | jq '{sub, repository, ref, aud, iss}'
 
       - name: Authenticate to Britive
-        env:
-          BRITIVE_TENANT: <your-tenant>
         run: |
-          echo "Replace with the exchange step from the existing WIF test plan"
+          pip install --quiet pybritive
+          pybritive ls profiles -t bira.pr2.aws --federation-provider github-britive

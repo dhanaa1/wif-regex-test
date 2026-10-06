@@ -10,6 +10,7 @@ permissions:
 jobs:
   auth:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - name: Get GitHub OIDC token
         id: oidc

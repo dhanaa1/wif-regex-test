@@ -39,3 +39,8 @@ jobs:
         run: |
           pip install --quiet pybritive
           pybritive ls profiles -t bira.pr2.aws --federation-provider github-britive
+
+      - name: Authenticate to Britive (stg2)
+        run: |
+          pip install --quiet pybritive
+          pybritive ls profiles -t stg2-qa.stg2.aws --federation-provider github-britive
